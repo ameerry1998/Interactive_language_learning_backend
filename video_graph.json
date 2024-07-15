@@ -1,0 +1,70 @@
+{
+  "videos": {
+    "1": {
+      "clip_name": "Lesson1_Clip1",
+      "clip_text": "Hi, it's so good to see you! How've you been?",
+      "url": "Lesson1_Clip1.mp4",
+      "responses": [
+        { "Response": "I’ve been good! how are you?", "next_video": 2 },
+        { "Response": "Not good!", "next_video": 3 },
+        { "Response": "Who are you?", "next_video": 4 }
+      ]
+    },
+    "2": {
+      "clip_name": "Lesson1_Clip2",
+      "clip_text": "I'm so happy to hear that, what are you doing here?",
+      "url": "Lesson1_Clip2.mp4",
+      "responses": [
+        { "Response": "I'm shopping for groceries.", "next_video": 5 },
+        { "Response": "Just looking around.", "next_video": 6 },
+        { "Response": "I need to buy some things for a party.", "next_video": 7 }
+      ]
+    },
+    "3": {
+      "clip_name": "Lesson1_Clip3",
+      "clip_text": "I'm sorry to hear that! What's wrong?",
+      "url": "Lesson1_Clip3.mp4",
+      "responses": [
+        { "Response": "x", "next_video": 8 }
+      ]
+    },
+    "4": {
+      "clip_name": "Lesson1_Clip4",
+      "clip_text": "I'm Caity, remember? We're friends.",
+      "url": "Lesson1_Clip4.mp4",
+      "responses": [
+        { "Response": "Right! I'm sorry I forgot! How are you?", "next_video": 9 }
+      ]
+    },
+    "5": {
+      "clip_name": "Lesson1_Clip5",
+      "clip_text": "Oh that's awesome! What are you planning to buy?",
+      "url": "Lesson1_Clip5.mp4",
+      "responses": []
+    },
+    "6": {
+      "clip_name": "Lesson1_Clip6",
+      "clip_text": "Oh that's awesome! What are you planning to buy?",
+      "url": "Lesson1_Clip6.mp4",
+      "responses": []
+    },
+    "7": {
+      "clip_name": "Lesson1_Clip7",
+      "clip_text": "Oh that's awesome! What are you planning to buy?",
+      "url": "Lesson1_Clip7.mp4",
+      "responses": []
+    },
+    "8": {
+      "clip_name": "Lesson1_Clip8",
+      "clip_text": "Maybe shopping will help you feel better, what are you planning to buy?",
+      "url": "Lesson1_Clip8.mp4",
+      "responses": []
+    },
+    "9": {
+      "clip_name": "Lesson1_Clip9",
+      "clip_text": "Good! What are you planning to buy?",
+      "url": "Lesson1_Clip9.mp4",
+      "responses": []
+    }
+  }
+}
