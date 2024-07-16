@@ -6,10 +6,8 @@ const config = require('./config');
 
 const app = express();
 
-// Update CORS configuration
-app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000' // Replace with your frontend URL
-}));
+// Allow all origins for now, we'll restrict this later
+app.use(cors());
 
 app.use(express.static('public'));
 app.use('/static', express.static(__dirname));
