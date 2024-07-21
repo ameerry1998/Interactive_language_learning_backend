@@ -3,13 +3,15 @@ const cors = require('cors');
 const path = require('path');
 const multer = require('multer');
 const config = require('./config');
-
 const app = express();
 
 // Update CORS configuration
 const allowedOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',') : ['http://localhost:3000'];
+console.log('Allowed origins:', allowedOrigins);
+
 app.use(cors({
   origin: function(origin, callback) {
+    console.log('Request origin:', origin);
     if(!origin) return callback(null, true);
     if(allowedOrigins.indexOf(origin) === -1) {
       var msg = 'The CORS policy for this site does not allow access from the specified Origin.';
@@ -19,6 +21,12 @@ app.use(cors({
   },
   credentials: true
 }));
+
+// Middleware to log all requests
+app.use((req, res, next) => {
+  console.log(`${new Date().toISOString()} - ${req.method} ${req.path}`);
+  next();
+});
 
 app.use(express.static('public'));
 app.use('/static', express.static(__dirname));
@@ -37,6 +45,12 @@ app.use('/api/voice-chat', require('./routes/voiceChat'));
 // Add a simple root route for testing
 app.get('/', (req, res) => {
   res.send('Interactive Language Learning Backend is running!');
+});
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
 });
 
 // Update PORT assignment
